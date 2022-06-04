@@ -16,7 +16,7 @@ html{
 
 /*End of common styles*/
 
-
+/*Start of Page BG*/
 .page-bg{
 	position: fixed;
 	width: 100%;
@@ -24,3 +24,70 @@ html{
 	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/me.png) center no-repeat;
 	background-size: cover;
 }
+
+/*End of Page BG*/
+
+
+/* Start: Mouse circle */
+
+.mouse-circle,
+.mouse-dot{
+	border-radius: 50%;
+	position: fixed;
+	z-index: 300;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+.mouse-circle{
+	width: 6rem;
+	height: 6rem;
+	border: 0.1rem solid #c7a622;
+	animation: mouseCircleAnim 10s infinite linear;
+
+}
+.mouse-dot{
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: #9b0e0e;
+	animation: mouseDotAnim 10s infinite linear;
+}
+
+@keyframes mouseDotAnim {
+	0%{
+		width: 0.5rem;
+		height: 0.5rem
+	}
+
+	55%{
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+	100%{
+		width: 0.5rem;
+		height: 0.5rem;
+	}
+}
+@keyframes mouseCircleAnim{
+	0%{
+		width: 6rem;
+		height: 8rem;
+	}
+	25%%{
+		width: 8rem;
+		height: 8rem;
+	}
+	35%{
+		width: 4rem;
+		height: 4rem;
+	}
+	70%{
+		width: 8rem;
+		height: 8rem;
+	}
+	100%{
+		width: 6rem;
+		height: 6rem;
+	}
+}
+/*End: Mouse circle */
+  
